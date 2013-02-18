@@ -171,10 +171,10 @@ static NSDate *lastVersionCheckPerformedOnDate;
         case AlertType_Force: {
             
             
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:kHarpyAlertViewTitle
-                                                                message:[NSString stringWithFormat:@"A new version of %@ is available. Please update to version %@ now.", appName, currentAppStoreVersion]
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(kHarpyAlertViewTitle, @"")
+                                                                message:[NSString stringWithFormat:NSLocalizedString(@"A new version of %1$@ is available. Please update to version %2$@ now.", @""), appName, currentAppStoreVersion]
                                                                delegate:self
-                                                      cancelButtonTitle:kHarpyUpdateButtonTitle
+                                                      cancelButtonTitle:NSLocalizedString(kHarpyUpdateButtonTitle, @"")
                                                       otherButtonTitles:nil, nil];
             
             [alertView show];
@@ -184,11 +184,11 @@ static NSDate *lastVersionCheckPerformedOnDate;
             
         case AlertType_Option: {
             
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:kHarpyAlertViewTitle
-                                                                message:[NSString stringWithFormat:@"A new version of %@ is available. Please update to version %@ now.", appName, currentAppStoreVersion]
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(kHarpyAlertViewTitle, @"")
+                                                                message:[NSString stringWithFormat:NSLocalizedString(@"A new version of %1$@ is available. Please update to version %2$@ now.", @""), appName, currentAppStoreVersion]
                                                                delegate:self
-                                                      cancelButtonTitle:kHarpyCancelButtonTitle
-                                                      otherButtonTitles:kHarpyUpdateButtonTitle, nil];
+                                                      cancelButtonTitle:NSLocalizedString(kHarpyCancelButtonTitle, @"")
+                                                      otherButtonTitles:NSLocalizedString(kHarpyUpdateButtonTitle, @""), nil];
             
             [alertView show];
             
@@ -200,11 +200,11 @@ static NSDate *lastVersionCheckPerformedOnDate;
             [[NSUserDefaults standardUserDefaults] setObject:currentAppStoreVersion forKey:kHarpyDefaultSkippedVersion];
             [[NSUserDefaults standardUserDefaults] synchronize];
             
-            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:kHarpyAlertViewTitle
-                                                                message:[NSString stringWithFormat:@"A new version of %@ is available. Please update to version %@ now.", appName, currentAppStoreVersion]
+            UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:NSLocalizedString(kHarpyAlertViewTitle, @"")
+                                                                message:[NSString stringWithFormat:NSLocalizedString(@"A new version of %1$@ is available. Please update to version %2$@ now.", @""), appName, currentAppStoreVersion]
                                                                delegate:self
-                                                      cancelButtonTitle:kHarpySkipButtonTitle
-                                                      otherButtonTitles:kHarpyUpdateButtonTitle, kHarpyCancelButtonTitle, nil];
+                                                      cancelButtonTitle:NSLocalizedString(kHarpySkipButtonTitle, @"")
+                                                      otherButtonTitles:NSLocalizedString(kHarpyUpdateButtonTitle, @""), NSLocalizedString(kHarpyCancelButtonTitle, @""), nil];
             
             [alertView show];
             
